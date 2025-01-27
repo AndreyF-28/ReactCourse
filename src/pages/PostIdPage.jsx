@@ -7,14 +7,16 @@ import Loader from '../components/UI/Loader/Loader';
 const PostIdPage = () => {
     const params = useParams()
     const [post, setPost] = useState({})
-    const [fetchPostById, isLoading, error] = useFetching(async (id) => {
-        const response = await PostService.getById(id)
+    // eslint-disable-next-line no-unused-vars
+    const [fetchPostById, isLoading, error] = useFetching(async () => {
+        const response = await PostService.getById(params.id)
         setPost(response.data)
     })
 
     useEffect(() => {
         fetchPostById(params.id)
-    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     return (
         <div>
             <h1>Вы открыли страницу поста c ID = {params.id}</h1>

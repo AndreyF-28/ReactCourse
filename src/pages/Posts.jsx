@@ -16,6 +16,7 @@ function Posts() {
     const [filter, setFilter] = useState({ sort: "", query: "" });
     const [modal, setModal] = useState(false);
     const [totalPages, setTotalPages] = useState(0);
+    // eslint-disable-next-line no-unused-vars
     const [limit, setLimit] = useState(10);
     const [page, setPage] = useState(1);
     const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
