@@ -15,7 +15,7 @@ const PostItem = (props) => {
         setTimeout(() => {
             setAnimate(false);
             props.remove(props.post);
-        }, 1000); // Длительность анимации
+        }, 400); // Длительность анимации
     };
 
     return (

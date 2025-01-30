@@ -24,69 +24,49 @@
 }
 
 .post__btns {
-  display: flex;
+    display: flex;
 }
 
 .post.animate {
-  animation: clickAnimation 1s forwards;
+    animation: clickAnimation 0.4s ease-out forwards;
+    overflow: hidden;
 }
 
 @keyframes clickAnimation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
 }
-
-.post-enter {
-    opacity: 0;
-  }
-
-.post-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-  }
-  
-.post-exit {
-    opacity: 1;
-  }
-
-.post-exit-active {
-    opacity: 0;
-    transition: opacity 500ms ease-in;
-  }
 
 .page__wrapper {
     margin-top: 30px;
     display: flex;
-  }
+}
 
 .page {
     padding: 10px;
     border: 1px solid rgb(70, 4, 18);
-  }
+}
 
 .page__current {
     border: 2px solid orange;
     font-weight: bold;
-  }
+}
 
 .navbar {
-  height: 50px;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
-  background: rgb(112, 158, 131);
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: rgb(112, 158, 131);
 }
 
 .navbar__links {
-  margin-left: auto;
+    margin-left: auto;
 }
-
-
