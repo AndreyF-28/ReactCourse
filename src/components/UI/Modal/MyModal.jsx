@@ -1,5 +1,6 @@
 import React from 'react';
 import cl from './MyModal.module.css';
+import CloseButton from '../Button/CloseButton';
 
 const MyModal = ({children, visible, setVisible}) => {
 

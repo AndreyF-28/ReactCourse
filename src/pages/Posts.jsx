@@ -12,6 +12,7 @@ import Pagination from "../components/UI/Pagination/Pagination";
 import PostFilter from "../components/PostFilter";
 import { useObserver } from "../hooks/useObserver";
 import MySelect from "../components/UI/select/MySelect";
+import CloseButton from "../components/UI/Button/CloseButton";
 
 function Posts() {
     const [posts, setPorts] = useState([]);
@@ -62,6 +63,11 @@ function Posts() {
                 Создать пост
             </MyButton>
             <MyModal visible={modal} setVisible={setModal}>
+                <CloseButton
+                    onClick={() => setModal(false)}
+                >
+                    &times;
+                </CloseButton>
                 <PostForm create={createPost} />
             </MyModal>
 

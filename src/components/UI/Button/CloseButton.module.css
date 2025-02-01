@@ -1,0 +1,11 @@
+.closeBtn {
+    margin-bottom: 2px;
+    float: inline-end;
+    font-size: 20px;
+    color: #1b1414;
+    line-height: 0.5;
+    /* Добавляем псевдоэлемент :hover для анимации */
+    &:hover {
+        color: #1d1616;
+    }
+}
